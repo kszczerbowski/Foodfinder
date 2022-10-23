@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  text-align: center;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0px auto;
+}
+
+button {
+  margin-top: 50px;
+}
+
