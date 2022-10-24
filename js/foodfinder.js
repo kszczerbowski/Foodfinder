@@ -2,7 +2,7 @@ const meals = [
     "kulki ryżowe z serem i szynką w sosie beszamelowym",
     "zapiekany brokuł",
     "ryż z curry i kurczakiem",
-    "ryz a'la delicate",
+    "ryż a'la delicate",
     "spaghetti napoli",
     "kurczak pieczony udka",
     "spaghetti carbonara",
@@ -71,8 +71,3 @@ randomizingBtn.addEventListener('click', () => {
       }
 })
 
-
-// const counts = {};
-// const sampleArray = ['a', 'a', 'a', 'a', 'a', 'b', 'c'];
-// sampleArray.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
-// console.log(counts.a)
