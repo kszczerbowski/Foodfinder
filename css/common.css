@@ -22,7 +22,7 @@ body {
 .container {
   max-width: 480px;
   margin: 0px auto;
-  height: 100vh
+  min-height: 100vh
 }
 
 button {
@@ -40,8 +40,12 @@ button {
   0px 3px 1px 0px #0000001A;
 }
 
-button:hover, button:active {
+button:hover {
   background-color: antiquewhite;
+}
+
+button:active {
+  background-color:aliceblue;
 }
 
 h3, p {

@@ -37,10 +37,28 @@ const twoDaysMeals = ["spaghetti carbonara", "sos serowy", "kotlety z serem i pi
 const randomizingBtn = document.querySelector('button');
 const weekdaysHeadings = document.querySelectorAll('.hidden');
 const weekdays = document.querySelectorAll('.meal');
+function wait(ms){
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms) {
+      end = new Date().getTime();
+   }
+ }
 randomizingBtn.addEventListener('click', () => {
-    weekdaysHeadings.forEach(value => {
-        value.classList.remove('hidden');
-    })
+    if (!weekdaysHeadings[0].classList.contains('hidden')) {
+        weekdaysHeadings.forEach(value => {
+            value.classList.add('hidden');
+        })
+        weekdaysHeadings.forEach(value => {
+            value.classList.remove('hidden');
+        })
+    }
+    if (weekdaysHeadings[0].classList.contains('hidden')) {
+        weekdaysHeadings.forEach(value => {
+            value.classList.remove('hidden');
+        })
+    }
+    
     const randomMeals = [];
     for (let i = 0; i < 7; i ++) {
         // make two days meals appear twice
@@ -71,3 +89,11 @@ randomizingBtn.addEventListener('click', () => {
       }
 })
 
+
+const testButton = document.querySelector('button#testbutton');
+testButton.addEventListener('click', () => {
+    wait(3000);
+    weekdaysHeadings.forEach(value => {
+        value.classList.add('hidden');
+    })
+});
