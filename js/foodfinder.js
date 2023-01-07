@@ -1,5 +1,6 @@
 const meals = [
     "kulki ryżowe z serem i szynką w sosie beszamelowym",
+    "wrapy",
     "zapiekany brokuł",
     "ryż z curry i kurczakiem",
     "ryż a'la delicate",
@@ -67,7 +68,7 @@ randomizingBtn.addEventListener('click', () => {
             continue;
         }
         // end
-        let randomNumber = Math.round(Math.random() * (meals.length-1));
+        let randomNumber = Math.floor(Math.random() * (meals.length));
         while (randomMeals.includes(meals[randomNumber]) || meals[randomNumber] === "rybsko") {
             randomNumber = Math.round(Math.random() * meals.length)
         }
@@ -79,7 +80,7 @@ randomizingBtn.addEventListener('click', () => {
             }
         }
         // end
-        // if two days meal is picked for Sunday, make it also appear for Wednesday
+        // if two days meal is picked for Sunday, make it also appear for Saturday
         if (i===6 && twoDaysMeals.includes(meals[randomNumber])) {
             weekdays[i-1].textContent = meals[randomNumber];
         }
