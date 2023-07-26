@@ -33,7 +33,8 @@ const meals = [
   "quiche szpinakowy albo jakiś inny wytrawny",
   "curry warzywne https://www.jadlonomia.com/przepisy/kokosowy-dal-z-czerwonej-soczewicy/?fbclid=IwAR2UW_9ly23vqDuYpjTw8BHR3yurZnhXcZXSIPmctd1tTq8teAqFTg-Hrsg",
   "curry z ciecierzycą https://www.kwestiasmaku.com/przepis/curry-z-ciecierzyca-batatami-i-szpinakiem",
-  "burgerki"
+  "burgerki",
+  "kurczak w sosie z brokułami"
 ]
 const twoDaysMeals = ["spaghetti carbonara", "sos serowy", "kotlety z serem i pieczarkami"]
 const randomizingBtn = document.querySelector('button');
@@ -91,11 +92,3 @@ randomizingBtn.addEventListener('click', () => {
     }
 })
 
-
-const testButton = document.querySelector('button#testbutton');
-testButton.addEventListener('click', () => {
-  wait(3000);
-  weekdaysHeadings.forEach(value => {
-      value.classList.add('hidden');
-  })
-});
